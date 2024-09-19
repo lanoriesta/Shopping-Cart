@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Body */
+  --body-bg: #fbfcf8;
+
+  --container-padding: 3rem;
+}
+
+@layer base {
+  html {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-bodyBG;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: #2f2504;
+}
+
+/*? SPINNER */
+.spinner-con {
+  @apply flex justify-center items-center h-full;
+}
+
+/*? NAVIGATION */
+.container-nav {
+  @apply flex items-center justify-between w-full py-5;
+}
+
+.container-title {
+  width: 90%;
+}
+
+.logo-text {
+  @apply text-5xl font-bold;
+}
+.container-link {
+  @apply tracking-widest text-center px-2 py-1;
+}
+
+.link-home,
+.link-cart {
+  text-decoration: none;
+  color: #2f2504;
+  font-size: 15px;
+}
+
+/*? PRODUCTS */
+.product-con,
+.cart-item-con {
+  @apply grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 py-5;
+}
+
+/*? EMPTY CART */
+.empty-cart-con {
+  @apply flex flex-col justify-center items-center h-[80vh] text-center w-full p-5;
+}
+.empty-cart-con h1 {
+  @apply text-3xl font-bold text-gray-500/40;
+}
+
+.empty-cart-con .shop-now-btn {
+  @apply bg-brownColor text-white p-3 px-7 m-5 rounded-sm shadow-lg hover:shadow-sm transition-all duration-150;
+}
+
+/*? CART */
+.cart-container {
+  @apply grid grid-cols-3 w-full container;
+}
+
+.cart-item-con {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 col-span-2 border-r-2 p-5;
+}
+
+.price-computation-con {
+  @apply w-full p-3;
+}
+
+.item-name-cart {
+  @apply grid grid-cols-4 gap-3 justify-between px-4 w-full;
+}
+
+.total-amount-con {
+  @apply grid grid-cols-4 gap-3 justify-between px-4  w-full;
+}
+
+/*? CARD ITEM */
+.card-item-con {
+  @apply bg-[#fff] h-[40vh] shadow-lg rounded-md p-4 flex flex-col gap-3 justify-between  ease-in-out transition-all hover:-translate-y-1 hover:scale-110 hover:shadow-sm;
+}
+.card-item-con p {
+  @apply truncate py-1;
+}
+.image-item-con {
+  @apply flex flex-col items-center justify-center h-full;
+}
+
+.image-item-con img {
+  @apply w-2/4;
+}
+
+.add-cart-btn {
+  @apply py-3 bg-brownColor text-white rounded-[2px] hover:bg-greyColor transition-all;
+}

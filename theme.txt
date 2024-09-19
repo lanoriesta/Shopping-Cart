@@ -1,0 +1,4 @@
+
+bg: #fbfcf8
+h1, h2, h3: #2F2504
+h4, h5: #A5AE9E
